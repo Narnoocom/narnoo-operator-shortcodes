@@ -1,0 +1,15 @@
+.slide {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%, -50%) !important;
+    top: 25% !important;
+    left: 50% !important;
+
+}
+
+@media (max-width: 767px) {
+    .noo_slider-main-slide{ 
+        max-height:200px; 
+    }
+}

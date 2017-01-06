@@ -1,0 +1,40 @@
+.narnoo-product {
+  margin: 0 0 15px;
+  right: 0;
+}
+.narnoo-product .narnoo-product-link {
+  display: block;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.narnoo-product-hover {
+  background: rgba(254, 209, 54, 0.9);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+}
+.narnoo-product-hover:hover {
+  opacity: 1;
+}
+.narnoo-product-hover .narnoo-product-hover-content {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  top: 50%;
+  margin-top: -12px;
+  color: white;
+}
+.narnoo-product-hover .narnoo-product-hover-content i {
+  margin-top: -12px;
+}
+.narnoo-product-hover .narnoo-product-hover-content h3,
+.narnoo-product-hover .narnoo-product-hover-content h4 {
+  margin: 0;
+}
