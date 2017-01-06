@@ -25,6 +25,15 @@
 		<strong>speed:</strong> The gallery speed in micro secounds - <em>Default: 5000</em><br/>	
 	</p>
 	<!-- Noo Slider -->
+	<h3>Narnoo Single Image Gallery</h3>
+	<p>Display a Narnoo gallery using a single image to open the gallery in a lightbox.</p>
+	<p>shortcode: <strong>[narnoo_single_gallery album=""]</strong>
+	<h4>Options:</h4>
+		<strong>album:</strong> The album name - <em>Can be found in your Narnoo.com account</em><br/>
+		<strong>width:</strong> The opening thumbnail image width in pixels - <em>Default: 200px</em><br/>
+		<strong>height:</strong> The opening thumbnail image height in pixels - <em>Default: 150px</em><br/>	
+	</p>
+	<!-- Noo Single Image Gallery -->
 	<h3>Narnoo Video Player</h3>
 	<p>Display a Narnoo video player showing one your Narnoo videos</p>
 	<p>shortcode: <strong>[narnoo_video_player video=""]</strong>
@@ -34,7 +43,7 @@
 		<strong>height:</strong> The player height in pixels - <em>Default: 315px</em><br/>	
 		<strong>autoplay:</strong> Whether the video is autoplayed - <em>Default: true</em><br/>	
 	</p>
-	<!-- Noo video -->
+	<!-- Noo Video -->
 	<h3>Narnoo PDF Flip Book</h3>
 	<p>Display a flip book in a lightbox containing one your uploaded print materials in Narnoo</p>
 	<p>shortcode: <strong>[narnoo_flip_book brochure=""]</strong>

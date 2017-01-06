@@ -1,5 +1,12 @@
 <?php 
+
+global $narnoo_slg_shortcode_count;	
+//if ( Narnoo_Distributor_Helper::wp_supports_enqueue_script_in_body() ) {
 Narnoo_Shortcodes::load_scripts_for_single_gallery();
+// }
+if ( ! isset( $narnoo_slg_shortcode_count ) ) {
+	$narnoo_slg_shortcode_count = 0;
+}
 extract( shortcode_atts( array(
 	'album' => '',			
 	'width' => '200',			// optional width
@@ -51,11 +58,12 @@ if ( ! is_null( $request ) ) {
 <?php 
 foreach ($list->operator_albums_images as $img) {
            
-        echo '<a href="'.$img->xlarge_image_path.'" rel="imagebox[slg]" id="narnoo_single_link_gallery"></a>';
+        echo '<a href="'.$img->xlarge_image_path.'" title="'.$img->caption.'" rel="imagebox[narnoo_slg'.$narnoo_slg_shortcode_count.']" id="narnoo_single_link_gallery-'.$narnoo_slg_shortcode_count.'"></a>';
  }
  ?>
-<a href="javascript:imagebox.open(document.getElementById('narnoo_single_link_gallery'));" class="thumbnail">
-	<img src="<?php echo $list->operator_albums_images[0]->thumb_image_path; ?>" alt="Narnoo image" width="200" height="150" />
-	<span class="cover"></span>
+<a href="javascript:imagebox.open(document.getElementById('narnoo_single_link_gallery-<?php echo $narnoo_slg_shortcode_count;  ?>'));" class="narnoo_single_link_gallery_thumbnail">
+	<img src="<?php echo $list->operator_albums_images[0]->thumb_image_path; ?>" alt="Narnoo image" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
+	<span class="narnoo_single_link_gallery_cover"></span>
 </a>
+<?php $narnoo_slg_shortcode_count++ ?>
 		
