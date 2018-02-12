@@ -31,7 +31,19 @@
 	<h4>Options:</h4>
 		<strong>album:</strong> The album name - <em>Can be found in your Narnoo.com account</em><br/>
 		<strong>width:</strong> The opening thumbnail image width in pixels - <em>Default: 200px</em><br/>
-		<strong>height:</strong> The opening thumbnail image height in pixels - <em>Default: 150px</em><br/>	
+		<strong>height:</strong> The opening thumbnail image height in pixels - <em>Default: 150px</em><br/>
+		<strong>thumb:</strong> Choose which image size acts as the single thumb - <em>Default: preview</em><br/>
+		<em>Thumb Options:</em><br/>
+		<ul>
+			<li>thumb</li>
+			<li>preview - default</li>
+			<li>large</li>
+			<li>xlarge</li>
+			<li>xxlarge</li>
+			<li>200 - 200px X 150px</li>
+			<li>400 - 400px X 300px</li>
+			<li>800 - 800px X 600px</li>
+		</ul>	
 	</p>
 	<!-- Noo Single Image Gallery -->
 	<h3>Narnoo Video Player</h3>

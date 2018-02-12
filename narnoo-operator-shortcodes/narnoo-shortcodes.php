@@ -104,13 +104,30 @@ class Narnoo_Shortcodes {
 	 */
 	static function load_scripts_for_image_gallery() {
 		// register custom names and dependencies for the common scripts which are to be loaded only once per page with shortcode(s)
-		wp_register_script( 'narnoo.jquery.lightslidermaster', plugins_url( 'libs/narnoo_gallery/js/lightslider.min.js', __FILE__ ), array( 'jquery' ) );
+		wp_register_script( 'narnoo.jquery.lightslidermaster', plugins_url( 'libs/narnoo_gallery/js/lightslider.min.js', __FILE__ ), array( 'jquery' ), NULL, TRUE );
 		wp_register_style( 'narnoo.css.lightslidermaster', plugins_url( 'libs/narnoo_gallery/css/lightslider.min.css', __FILE__ ));
 		
 		// load the common scripts
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'narnoo.jquery.lightslidermaster' );
 		wp_enqueue_style( 'narnoo.css.lightslidermaster' );
+
+		
+	}
+
+
+	/*
+	 * Loads Javascript files for featherlight box.
+	 */
+	static function load_scripts_for_featherlight_box() {
+		// register custom names and dependencies for the common scripts which are to be loaded only once per page with shortcode(s)
+		wp_register_script( 'narnoo.jquery.featherlight', plugins_url( 'libs/narnoo_featherlight_box/js/lity.min.js', __FILE__ ), array( 'jquery' ), NULL, TRUE );
+		wp_register_style( 'narnoo.css.featherlight', plugins_url( 'libs/narnoo_featherlight_box/css/lity.min.css', __FILE__ ));
+		
+		// load the common scripts
+		wp_enqueue_script( 'jquery' );
+		wp_enqueue_script( 'narnoo.jquery.featherlight' );
+		wp_enqueue_style( 'narnoo.css.featherlight' );
 
 		
 	}
@@ -155,12 +172,13 @@ class Narnoo_Shortcodes {
 	static function load_scripts_for_single_gallery() {
 		// register custom names and dependencies for the common scripts which are to be loaded only once per page with shortcode(s)
 		wp_register_script( 'narnoo.js.single', plugins_url( 'libs/narnoo_single_gallery/imagebox/imagebox.min.js', __FILE__ ), array( 'jquery' ) );
-		wp_register_script( 'narnoo.js.script', plugins_url( 'libs/narnoo_single_gallery/imagebox/script.js', __FILE__ ), array( 'jquery','narnoo.js.single' ));
+		wp_register_script( 'narnoo.js.script', plugins_url( 'libs/narnoo_single_gallery/script.js', __FILE__ ), array( 'jquery')); //,'narnoo.js.single' 
 		wp_register_style( 'narnoo.css.single', plugins_url( 'libs/narnoo_single_gallery/imagebox/imagebox.min.css', __FILE__ ));
 		
 		// load the common scripts
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'narnoo.js.single' );
+		wp_enqueue_script( 'narnoo.js.script' );
 		wp_enqueue_style( 'narnoo.css.single' );
 
 		
